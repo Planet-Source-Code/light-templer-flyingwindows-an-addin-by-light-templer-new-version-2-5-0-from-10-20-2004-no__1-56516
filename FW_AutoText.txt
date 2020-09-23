@@ -1,0 +1,259 @@
+
+;	#*# Flying Windows AutoText #*#
+
+;	Last edit:  10/18/2004
+
+
+;		Important Note:
+;
+;		The replacement is done by VB's SendKeys command, so all of
+;		its feautures are allowed and all restrictions are the same
+;		here! e.g. that means you have to write {(} to get a simple (
+;		A ~ means Carriage Return/LineFine (next line) and there are
+;		many more things to take care.
+;		But if you read this lines you are a VB programmer and so using
+;		SendKeys and the VB helpfile for it shouldn't be a problem to you ;)
+
+
+; === Shortcuts for simple commands/functions ===
+
+[ab]
+As Boolean~
+
+[ad]
+As Double~
+
+[ai]
+As Integer~
+
+[al]
+As Long~
+
+[as]
+As Object
+
+[as]
+As String~
+
+[av]
+As Variant
+
+[ay]
+As Byte~
+
+[ce]
+Case Else~
+{Tab}{Tab}
+
+[dl]
+Do Loop 
+
+[dw]
+Do While 
+
+[ee]
+End Enum
+
+[ef]
+End Function~
+~
+
+[eh]
+error_handler:~~
+
+[ei]
+End If~
+
+[ese]
+End Select
+
+[esu]
+End Sub~
+~
+
+[et]
+End Type
+
+[ew]
+End With~
+
+[fe]
+For Each  In {Left}{Left}{Left}{Left}
+
+[fi0]
+For i = 0 To 
+
+[fi1]
+For i = 1 To 
+
+[in]
+Is Nothing 
+
+[lb]
+LBound{(}
+
+[lw]
+Loop While 
+
+[mb]
+Msgbox
+
+[md]
+Screen.MousePointer = vbDefault~
+
+[mh]
+Screen.MousePointer = vbHourglass~
+
+[ni]
+Next i~
+
+[oege]
+On Error GoTo error_handler~
+
+[oern]
+On Error Resume Next~
+
+[olege]
+On Local Error GoTo error_handler~
+
+[olern]
+On Local Error Resume Next~
+
+[pr]
+Private 
+
+[pr]
+Private Const 
+
+[pre]
+Private Enum 
+
+[prf]
+Private Function {(}{)} {Left}{Left}{Left}
+
+[prs]
+Private Sub {(}{)}{Left}{Left}
+
+[prt]
+Private Type 
+
+[prw]
+Private WithEvents 
+
+[pu]
+Public 
+
+[pue]
+Public Enum 
+
+[puf]
+Public Function {(}{)} {Left}{Left}{Left}
+
+[pus]
+Public Sub {(}{)}{Left}{Left}
+
+[put]
+Public Type 
+
+[puw]
+Public WithEvents 
+
+[re]
+RaiseEvent 
+
+[sc]
+Select Case 
+
+[ub]
+UBound{(}
+
+[wh]
+while 
+
+[xf]
+Exit Function~
+
+[xfe]
+Exit Function~
++{Tab}End If~
+~
+
+[xs]
+Exit Sub~
+
+[xse]
+Exit Sub~
++{Tab}End If~
+~
+
+
+; === Code Snipets
+
+[rf]
+Dim fHndl       As Integer~
+Dim sLine       As String~
+~
+fHndl = FreeFile~
+Open  For Input As #fHndl~
+{Tab}Do While EOF(fHndl) = False~
+{Tab}Line Input #fHndl, sLine~
++{Tab}Loop~
++{Tab}Close #fHndl~
+~
+
+
+
+
+; === Comment blocks with 30, 40, 50 or 60 asteriks (*)  (Easy done, thx to Sendkeys ;) ) ===
+
+[*30]
+' {* 30}~
+
+[*40]
+' {* 40}~
+
+[*50]
+' {* 50}~
+
+[*60]
+' {* 60}~
+
+[*70]
+' {* 70}~
+
+[*80]
+' {* 80}~
+
+
+
+; === Comment Blocks ===
+[api]
+' **************************************~
+' *           API DECLARES             *~
+' **************************************~
+
+[eof]
+' **************************************~
+' *           END OF FILE              *~
+' **************************************~
+
+[pusf]
+' **************************************~
+' *     PUBLIC SUBS/FUNCTIONS          *~
+' **************************************~
+
+[prsf]
+' **************************************~
+' *     PRIVATE SUBS/FUNCTIONS         *~
+' **************************************~
+
+; Folks, here is a tricky one ;)
+[*!]
++{HOME}+{UP 4}' ***   %PROJECTNAME%~
+' ***   %AUTHOR%~
+' ***~
+' ***   Last edit:   %DATE%~
+' *!~
+
+
+; #*# End of File #*#
